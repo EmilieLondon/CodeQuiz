@@ -1,0 +1,152 @@
+
+
+* {
+    margin: 5px;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* main page title */
+.title {
+    text-align: center;
+    flex-basis: 60%;
+    align-self: center;
+    font-size: 15px;
+}
+
+/* link to highscores page */
+.highscores {
+    flex-basis: 20%;
+    align-self: center;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* timer in main page header */
+.timer {
+    flex-direction: column;
+    border-style: solid;
+    flex-basis: 20%;
+    text-align: center;
+    align-self: center;
+}
+
+/* sec span in main page timer header */
+#sec {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.timer h1 {
+    font-size: 17px;
+}
+
+/* instructions and reset score buttons */
+aside {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+/* all html mains */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.questions {
+    border-style: solid;
+    flex-basis: 50%;
+}
+
+.qText {
+    font-size: 20px;
+}
+
+.answers {
+    border-style: solid;
+    flex-basis: 50%;
+}
+
+/* removes bullets for answer buttons only */
+.aText li {
+    list-style: none;
+}
+
+/* only targets answer buttons */
+.btn {
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+/* highlight to show selected answer */
+.btn:focus {
+    background-color:lightblue;
+}
+
+footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* button styling */
+.start, .submit {
+    font-size: 25px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* button styling */
+#instructions {
+    font-size: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* highscore html body */
+.hBody {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* adds box around top scores in highscores html */
+.topScores {
+    border-style: solid;
+}
+
+/* top 5 header on highscores html */
+#rankHeader {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.rank {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* html page switch links */
+a {
+    text-decoration: none;
+    color:dodgerblue;
+}
+
+/* html page switch links */
+a:visited {
+    text-decoration: none;
+    color:dodgerblue;
+}

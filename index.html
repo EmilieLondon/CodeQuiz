@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body ontouchstart="">
+    <header>
+        <div class="highscores"><h1><a href="./highscores.html">High Scores</a></h2></div>
+        <div class="title"><h1>Code Quiz</h1></div>
+        <div class="timer"><span id="sec">0</span><h1>seconds remaining</h2></div>
+    </header>
+    <!-- instruction button popup -->
+    <aside><button id="instructions">Instructions</button></aside>
+    <main>
+        <!-- container for all questions -->
+        <div class="questions">
+            <div class="qHead">
+                <h2>Question # <span class="qNum">0</span>of 5</h2>
+            </div>
+            <div class="qText"></div>
+        </div>
+        <!-- container for all answers -->
+        <div class="answers">
+            <div class="aHead"><h2>Choose the best answer:</h2></div>
+            <div class="aText">
+                <ul id="ul"></ul>
+                <!-- sets each list item as a separate answer for scoring -->
+                <li><button id="li1" class="btn"></button></li>
+                <li><button id="li2" class="btn"></button></li>
+                <li><button id="li3" class="btn"></button></li>
+                <li><button id="li4" class="btn"></button></li>
+                <li><button id="li5" class="btn"></button></li>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- buttons for beginning quiz and submitting answers -->
+        <button class="start">Start</button>
+        <button class="submit">Submit</button>
+    </footer>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
