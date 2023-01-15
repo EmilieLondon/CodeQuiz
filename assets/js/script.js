@@ -7,7 +7,7 @@
 
 
 let currentQuestionIndex = 0;
-let time = questions.length * 10;
+let time = questions.length * 15;
 let timerId;
 
 // starting the Quiz
@@ -16,7 +16,7 @@ function startQuiz() {
     questionsEl.removeAttribute("class");
 
   // Start Timer
-  timerId = setInterval(clockTick, 1500);
+  timerId = setInterval(clockTick, 1000);
     timerEl.textContent = time;
   
   displayQuestion();
@@ -42,3 +42,43 @@ function displayQuestion() {
     choicesEl.appendChild(choiceButton);
   });
 }
+
+// clicking question choices
+function questionChoiceClick() {
+    // if  user guessed wrong
+    if (this.value !== questions[currentQuestionIndex].correctAnswer) {
+      time -= 5;
+      if (time < 0) {
+        time = 0;
+      }
+ 
+ timerEl.textContent = time;
+ feedbackEl.textContent = "Wrong answer!";
+ feedbackEl.style.color = "red";
+ feedbackEl.style.fontSize = "50px";
+ let wrongAudio = new Audio("./assets/sfx/incorrect.wav");
+ wrongAudio.play();
+} else {
+ // if user guessed right
+ feedbackEl.textContent = "Well done!";
+ feedbackEl.style.color = "green";
+ feedbackEl.style.fontSize = "50px";
+ let correctAudio = new Audio("./assets/sfx/correct.wav");
+ correctAudio.play();
+}
+
+// Display outcome
+feedbackEl.setAttribute("class", "feedback");
+
+setInterval(function () {
+ feedbackEl.setAttribute("class", "hide");
+}, 1000);
+// display next question or end quiz
+currentQuestionIndex++;
+  if (currentQuestionIndex === questions.length) {
+    endQuiz();
+  } else {
+    displayQuestion();
+  }
+}
+
