@@ -5,6 +5,18 @@
 
 // logic for putting questions on page
 
+let startScreenEl = document.querySelector("#start-screen");
+let scoresEl = document.querySelector("#choices");
+let timerEl = document.querySelector("#time");
+let startBtn = document.querySelector("#start");
+let questionsEl = document.querySelector("#questions");
+let questionTitleEl = document.querySelector("#question-title");
+let choicesEl = document.querySelector("#choices");
+let submitBtn = document.querySelector("#submit");
+let initialsEl = document.querySelector("#initials");
+let feedbackEl = document.querySelector("#feedback");
+let endScreenEl = document.querySelector("#end-screen");
+let finalScoreEl = document.querySelector("#final-score");
 
 let currentQuestionIndex = 0;
 let time = questions.length * 15;
