@@ -82,3 +82,20 @@ currentQuestionIndex++;
   }
 }
 
+// Timer
+function clockTick() {
+    time--;
+   timerEl.textContent = time;
+  if (time <= 0) {
+    endQuiz();
+  }
+}
+
+// Ending quiz
+function endQuiz() {
+    clearInterval(timerId);
+  endScreenEl.removeAttribute("class");
+  finalScoreEl.textContent = time;
+  questionsEl.setAttribute("class", "hide");
+}
+
