@@ -116,6 +116,7 @@ function questionChoiceClick() {
     setInterval(function () {
         feedbackEl.setAttribute("class", "hide");
 }, 2500);
+
 // display next question or end quiz
 currentQuestionIndex++;
 if (currentQuestionIndex === questions.length) {
