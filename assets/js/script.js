@@ -1,7 +1,39 @@
-//questions here
+//questions
 
-
-
+let questions = [
+    {
+      title: "API stands for Application _________ Interface?",
+      choices: ["Platform", "Programming", "Partner", "Performance"],
+      correctAnswer: "Programming",
+    },
+  
+    {
+      title: "In this CSS declaration example (color:blue), color is the property and blue is the _________?",
+      choices: ["Syntax", "Attribute", "Selector", "Value"],
+      correctAnswer: "Value",
+    },
+  
+    {
+      title:
+        "If you want to access the 'box' element in the array Arr = ['box', 'car', 'racer'], what would you set for X in Arr[X]?",
+      choices: ["-1", "1", "0", "Start"],
+      correctAnswer: "0",
+    },
+  
+    {
+      title: "X += Y is the same as which of the following?",
+      choices: ["X++", "Y = X + Y", "X = X + Y", "Y++"],
+      correctAnswer: "X = X + Y",
+    },
+  
+    {
+      title:
+        "How can you convert the string of any base to integer in JavaScript?",
+      choices: ["forEach()", "parseInt()", "number()", "push()"],
+      correctAnswer: "parseInt()",
+    }, 
+  ];
+  
 
 // logic for putting questions on page
 
