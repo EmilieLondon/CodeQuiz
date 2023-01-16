@@ -91,21 +91,21 @@ function displayQuestion() {
 function questionChoiceClick() {
     // if  user guessed wrong
     if (this.value !== questions[currentQuestionIndex].correctAnswer) {
-      time -= 5;
+      time -= 10;
       if (time < 0) {
         time = 0;
       }
  
  timerEl.textContent = time;
  feedbackEl.textContent = "Wrong answer!";
- feedbackEl.style.color = "red";
+ feedbackEl.style.color = "orange";
  feedbackEl.style.fontSize = "50px";
  let wrongAudio = new Audio("./assets/sfx/incorrect.wav");
  wrongAudio.play();
 } else {
  // if user guessed right
  feedbackEl.textContent = "Well done!";
- feedbackEl.style.color = "green";
+ feedbackEl.style.color = "blue";
  feedbackEl.style.fontSize = "50px";
  let correctAudio = new Audio("./assets/sfx/correct.wav");
  correctAudio.play();
@@ -116,7 +116,7 @@ feedbackEl.setAttribute("class", "feedback");
 
 setInterval(function () {
  feedbackEl.setAttribute("class", "hide");
-}, 1000);
+}, 2500);
 // display next question or end quiz
 currentQuestionIndex++;
   if (currentQuestionIndex === questions.length) {
@@ -143,3 +143,22 @@ function endQuiz() {
   questionsEl.setAttribute("class", "hide");
 }
 
+// highscores
+function storeHighscores() {
+      let initials = initialsEl.value;
+  
+    if (initialsEl !== "") {
+      let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+      let newScore = {
+        score: time,
+        initials: initials,
+      };
+  
+      highscores.push(newScore);
+      localStorage.setItem("highscores", JSON.stringify(highscores));
+  
+      location.href = "highscores.html";
+    }
+  }
+
+  submitBtn.addEventListener("click", storeHighscores);
